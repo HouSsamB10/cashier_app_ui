@@ -7,7 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
+  // done: his line initializes Hive for Flutter.It's an asynchronous operation, so we use await
   await Hive.initFlutter();
+  //done: This line opens a Hive box with the name 'cashier_app'.A Hive box is a container for storing and managing data.
   await Hive.openBox('cashier_app');
 
   Hive.registerAdapter(MenuAdapter());
